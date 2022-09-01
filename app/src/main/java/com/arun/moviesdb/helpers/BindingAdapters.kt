@@ -23,7 +23,6 @@ fun bindImageFromUrl(view: ImageView, imageUrl: String?) {
     }
 }
 
-
 @BindingAdapter("setDefaultVisibility")
 fun setDefaultVisibility(view: View, state: Enums.PageState) {
     if (state == Enums.PageState.DEFAULT || state == Enums.PageState.SUCCESS)

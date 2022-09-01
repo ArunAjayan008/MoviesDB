@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".BaseApplication"
         android:allowBackup="true"
@@ -13,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MoviesDB"
         android:usesCleartextTraffic="true">
+        <activity
+            android:name=".activities.ViewMovieActivity"
+            android:exported="false" />
         <activity
             android:name=".activities.MainActivity"
             android:exported="true">

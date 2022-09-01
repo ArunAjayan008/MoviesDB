@@ -1,5 +1,6 @@
 package com.arun.moviesdb.activities
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProviders
@@ -10,7 +11,6 @@ import com.arun.moviesdb.adapters.MovieHomeAdapter
 import com.arun.moviesdb.baseclasses.BaseActivity
 import com.arun.moviesdb.databinding.ActivityMainBinding
 import com.arun.moviesdb.interfaces.RecyclerItemClickListener
-import com.arun.moviesdb.utils.Utils.checkInternetAvailability
 import com.arun.moviesdb.viewmodels.MainActivityViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -36,7 +36,6 @@ class MainActivity : BaseActivity(), RecyclerItemClickListener {
     }
 
 
-
     private fun initObservers() {
         mainViewmodel.apply {
             event.observe(this@MainActivity, {
@@ -58,18 +57,20 @@ class MainActivity : BaseActivity(), RecyclerItemClickListener {
             moviesAdapter = MovieHomeAdapter(this@MainActivity)
             adapter = moviesAdapter
         }
-            lifecycleScope.launch {
-                mainViewmodel.movieList.observe(this@MainActivity) {
-                    it?.let {
-                        moviesAdapter?.submitData(lifecycle, it)
-                    }
+        lifecycleScope.launch {
+            mainViewmodel.movieList.observe(this@MainActivity) {
+                it?.let {
+                    moviesAdapter?.submitData(lifecycle, it)
                 }
             }
+        }
 
 
     }
 
     override fun onListItemClicked(item: Any) {
-//        TODO("Not yet implemented")
+        val intent = Intent(this@MainActivity, ViewMovieActivity::class.java)
+        intent.putExtra("movieID", item.toString())
+        startActivity(intent)
     }
 }

@@ -5,11 +5,13 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "movies")
 data class Movies(
-    @PrimaryKey (autoGenerate = false)
+    @PrimaryKey(autoGenerate = false)
     val id: String,
     val original_language: String,
+    val overview: String,
     val original_title: String,
     val poster_path: String,
     val release_date: String,
     val title: String,
+    val vote_average: Float
 )

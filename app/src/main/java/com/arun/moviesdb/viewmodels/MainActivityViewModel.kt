@@ -19,17 +19,12 @@ import javax.inject.Inject
 class MainActivityViewModel @Inject constructor(private val repository: GeneralRepository) :
     BaseViewModel() {
     val event = MutableLiveData<HomeEvent>()
-
     init {
         state.value = Enums.PageState.DEFAULT
-
     }
 
-    val movieList=repository.getMovies().cachedIn(viewModelScope)
 
-//    fun getMovieList(): LiveData<PagingData<Movies>> {
-//        return repository.getMovies()
-//    }
+    val movieList=repository.getMovies().cachedIn(viewModelScope)
 
         enum class HomeEvent {
             SUCCESS, FAILED

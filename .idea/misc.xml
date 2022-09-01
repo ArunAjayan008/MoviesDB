@@ -4,9 +4,13 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Projects/Android/MoviesDB/app/src/main/res/drawable/ic_android_black_24dp.xml" value="0.2203125" />
+        <entry key="..\:/Projects/Android/MoviesDB/app/src/main/res/drawable/ic_baseline_error_outline_24.xml" value="0.2203125" />
         <entry key="..\:/Projects/Android/MoviesDB/app/src/main/res/drawable/ic_baseline_local_movies_24.xml" value="0.2203125" />
+        <entry key="..\:/Projects/Android/MoviesDB/app/src/main/res/drawable/ic_baseline_star_24.xml" value="0.2203125" />
         <entry key="..\:/Projects/Android/MoviesDB/app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="..\:/Projects/Android/MoviesDB/app/src/main/res/layout/adapter_movieslist.xml" value="0.2" />
+        <entry key="..\:/Projects/Android/MoviesDB/app/src/main/res/layout/activity_view_movie.xml" value="0.22" />
+        <entry key="..\:/Projects/Android/MoviesDB/app/src/main/res/layout/adapter_movieslist.xml" value="0.22" />
+        <entry key="..\:/Projects/Android/MoviesDB/app/src/main/res/layout/layout_custom_error.xml" value="0.20416666666666666" />
       </map>
     </option>
   </component>
